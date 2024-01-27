@@ -22,7 +22,11 @@ export default class List extends Component {
                     inputValue: "",
                     todoItems: [...todoItems, inputValue],
                 });
-            } else {
+            } 
+            else if (inputValue.trim() === "") {
+                alert("The value can't be void!");
+            }
+            else  {
                 alert("You have already added this item to the list!");
             }
         };
