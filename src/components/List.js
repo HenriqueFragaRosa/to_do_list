@@ -24,10 +24,13 @@ export default class List extends Component {
                 });
             } 
             else if (inputValue.trim() === "") {
-                alert("The value can't be void!");
+                alert("The value can't be void!")
             }
             else  {
                 alert("You have already added this item to the list!");
+                this.setState({
+                    inputValue: "",
+                });
             }
         };
 
@@ -75,7 +78,6 @@ export default class List extends Component {
                         <li key={index}>{item}</li>
                     ))}
                 </ol>
-                {/* Include your script here if needed */}
             </div>
         );
     }
